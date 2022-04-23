@@ -9,7 +9,7 @@ import Product from '../Product/Product';
 import './Shop.css'
 
 const Shop = () => {
-   const [products, setProducts] = useProducts([])
+   const [products] = useProducts([])
     const [cart,setCart] = useState([])
     
 
@@ -48,7 +48,7 @@ const Shop = () => {
             <div className="products-container">
                 {
                     products.map(product => <Product 
-                        key={product.id} 
+                        key={product._id} 
                         product={product}
                         handleAddToCart={handleAddToCart}
                     ></Product>)
